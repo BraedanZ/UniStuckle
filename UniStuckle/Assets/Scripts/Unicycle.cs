@@ -23,6 +23,8 @@ public class Unicycle : MonoBehaviour
         float input = Input.GetAxisRaw("Vertical");
         
         // move the wheel
-        rb.velocity = new Vector2(input * speed, rb.velocity.y);
+        // rb.velocity = new Vector2(input * speed, rb.velocity.y);
+        // rb.AddForce(transform.right * input * speed);
+        rb.AddForce(new Vector2(1, 0) * input * speed);
     }
 }
