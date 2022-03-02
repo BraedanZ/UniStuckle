@@ -148,12 +148,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13303184}
   m_LocalRotation: {x: -0, y: -0, z: 0.0017054066, w: 0.99999857}
-  m_LocalPosition: {x: -1.419467, y: 0.4100333, z: 3.28374}
+  m_LocalPosition: {x: 0.0017020702, y: -0.025921524, z: 0}
   m_LocalScale: {x: 0.11343668, y: 0.11343668, z: 0.11343668}
   m_Children:
   - {fileID: 1212783834}
   m_Father: {fileID: 2088320580}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.195}
 --- !u!212 &13303186
 SpriteRenderer:
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 1212783837}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212783833}
   m_LocalRotation: {x: -0, y: -0, z: -0.005250234, w: 0.9999863}
-  m_LocalPosition: {x: 4.4, y: 4.8, z: -11.258971}
+  m_LocalPosition: {x: 0, y: 13.4, z: 0}
   m_LocalScale: {x: 8.815491, y: 8.815491, z: 8.815492}
   m_Children:
   - {fileID: 1998046659}
@@ -336,8 +336,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.50660306, y: 0.9384188}
-  m_Size: {x: 0.5234788, y: 1.1033957}
+  m_Offset: {x: 0.012889863, y: -0.028107049}
+  m_Size: {x: 0.5299976, y: 1.0520389}
   m_Direction: 0
 --- !u!114 &1212783836
 MonoBehaviour:
@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  playerPosition: {x: 0, y: 0}
 --- !u!50 &1212783837
 Rigidbody2D:
   serializedVersion: 4
@@ -506,12 +507,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528701718}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4456022, y: 0.41765475, z: 3.28374}
-  m_LocalScale: {x: 0.3315247, y: 0.3315247, z: 0.3315247}
+  m_LocalRotation: {x: -0, y: -0, z: 1.1641531e-10, w: 1}
+  m_LocalPosition: {x: 0.013045788, y: -0.018261373, z: 0}
+  m_LocalScale: {x: 0.33152476, y: 0.33152476, z: 0.3315247}
   m_Children: []
   m_Father: {fileID: 2088320580}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1528701720
 SpriteRenderer:
@@ -589,7 +590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998046658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.50856066, y: 0.30362213, z: 1.2771801}
+  m_LocalPosition: {x: 0, y: -0.6665191, z: 0}
   m_LocalScale: {x: 0.09861965, y: 0.09861965, z: 0.09861965}
   m_Children: []
   m_Father: {fileID: 1212783834}
@@ -674,11 +675,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088320579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.038298, y: -0.9219548, z: -3.28374}
+  m_LocalPosition: {x: -1.42, y: -0.486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 13303185}
   - {fileID: 1528701719}
+  - {fileID: 13303185}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -694,7 +695,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d5affb8b9c28545935242ea294b026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 600
+  speed: 300
+  playerPosition: {x: 0, y: 0}
+  unicyclePosition: {x: 0, y: 0}
+  lean: 0
+  leanMultiplier: 2
+  antiLeanMultiplier: 0.7
 --- !u!50 &2088320582
 Rigidbody2D:
   serializedVersion: 4
@@ -729,9 +735,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.4427729, y: 0.41491497}
+  m_Offset: {x: 0.012242049, y: -0.018016309}
   serializedVersion: 2
-  m_Radius: 0.49057007
+  m_Radius: 0.49617788
 --- !u!255 &2088320584
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -747,6 +753,6 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.92896193, y: -0.94966656}
+  m_ConnectedAnchor: {x: 0.014075278, y: -1.494059}
   m_DampingRatio: 0
   m_Frequency: 0
