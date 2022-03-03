@@ -19,7 +19,7 @@ public class Unicycle : MonoBehaviour
 
     Vector2 pedalPower;
 
-
+    // public WheelJoint2D wheel;
 
     // Start is called before the first frame update
     void Start()
@@ -39,26 +39,35 @@ public class Unicycle : MonoBehaviour
         
         // move the wheel
         lean = calculateLean();
-        print(lean);
+        // JointMotor2D motor;
         if(lean >= 0 && input > 0) {
             pedalPower = new Vector2(1, 0) * input * speed * lean * leanMultiplier;
             rb.AddForce(pedalPower);
+            // motor = new JointMotor2D { motorSpeed = input * speed * lean * leanMultiplier, maxMotorTorque = 10000 };
         } 
         
         else if (lean >= 0 && input < 0) {
             pedalPower = new Vector2(1, 0) * input * speed * lean * antiLeanMultiplier;
             rb.AddForce(pedalPower);
+            // motor = new JointMotor2D { motorSpeed = input * speed * lean * antiLeanMultiplier, maxMotorTorque = 10000 };
         } 
         
         else if (lean < 0 && input > 0) {
             pedalPower = new Vector2(1, 0) * input * speed * -lean * antiLeanMultiplier;
             rb.AddForce(pedalPower);
+            // motor = new JointMotor2D { motorSpeed = input * speed * -lean * antiLeanMultiplier, maxMotorTorque = 10000 };
         } 
         
         else if (lean < 0 && input < 0) {
             pedalPower = new Vector2(1, 0) * input * speed * -lean * leanMultiplier;
             rb.AddForce(pedalPower);
-        }
+            // motor = new JointMotor2D { motorSpeed = input * speed * -lean * leanMultiplier, maxMotorTorque = 10000 };
+        } 
+        // else {
+            // motor = new JointMotor2D { motorSpeed = 0, maxMotorTorque = 10000 };
+        // }
+        // wheel.motor = motor;
+        
     }
 
     private float calculateLean() {
