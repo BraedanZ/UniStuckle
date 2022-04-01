@@ -15,10 +15,10 @@ public class Unicycle : MonoBehaviour
 
     public float lean;
     public float leanMultiplier;
-    public float antiLeanMultiplier;
 
     Vector2 pedalPower;
 
+    float temp;
 
 
     // Start is called before the first frame update
@@ -40,29 +40,26 @@ public class Unicycle : MonoBehaviour
         // move the wheel
         lean = calculateLean();
         print(lean);
-        if(lean >= 0 && input > 0) {
-            pedalPower = new Vector2(1, 0) * input * speed * lean * leanMultiplier;
-            rb.AddForce(pedalPower);
-        } 
-        
-        else if (lean >= 0 && input < 0) {
-            pedalPower = new Vector2(1, 0) * input * speed * lean * antiLeanMultiplier;
-            rb.AddForce(pedalPower);
-        } 
-        
-        else if (lean < 0 && input > 0) {
-            pedalPower = new Vector2(1, 0) * input * speed * -lean * antiLeanMultiplier;
-            rb.AddForce(pedalPower);
-        } 
-        
-        else if (lean < 0 && input < 0) {
-            pedalPower = new Vector2(1, 0) * input * speed * -lean * leanMultiplier;
-            rb.AddForce(pedalPower);
+
+        // if(input > 0) {
+        //     pedalPower = new Vector2(1, 0) * input * speed * lean * leanMultiplier;
+        //     rb.AddForce(pedalPower);
+        // } else if(input < 0) {
+        //     pedalPower = new Vector2(1, 0) * input * speed * -(lean - 4) * leanMultiplier;
+        //     rb.AddForce(pedalPower);
+        // }
+
+        if(input > 0) {
+            temp = -(input * speed * lean * leanMultiplier);
+            rb.AddTorque(temp, ForceMode2D.Force);
+        } else if(input < 0) {
+            temp = -(input * speed * -(lean - 4) * leanMultiplier);
+            rb.AddTorque(temp, ForceMode2D.Force);
         }
     }
 
     private float calculateLean() {
         playerPosition = playerScript.playerPosition;
-        return playerPosition.x - unicyclePosition.x;
+        return playerPosition.x - unicyclePosition.x + 2;
     }
 }
