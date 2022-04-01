@@ -256,7 +256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307985052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.403, y: -0.547, z: -15.982596}
+  m_LocalPosition: {x: 2.395, y: -0.107, z: -15.982596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1096772300}
@@ -357,7 +357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.81, y: 1.1, z: -10}
+  m_LocalPosition: {x: 3.273, y: 1.286, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -782,8 +782,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096772298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0069999695, y: -0.003000021, z: 15.982596}
-  m_LocalScale: {x: 0.19952375, y: 0.19952375, z: 0.19952375}
+  m_LocalPosition: {x: 0.014, y: 0.017, z: 15.982596}
+  m_LocalScale: {x: 0.42135423, y: 0.42135423, z: 0.42135423}
   m_Children: []
   m_Father: {fileID: 307985057}
   m_RootOrder: 0
@@ -819,7 +819,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.14836422, y: -3.3371665}
+  m_ConnectedAnchor: {x: 0.18417606, y: -3.2348466}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -906,10 +906,10 @@ Rigidbody2D:
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3888549dd4bceb744819f9cc4509322d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &1183400803
 MonoBehaviour:
@@ -970,9 +970,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.162653, y: -0.8344822}
+  m_Offset: {x: 0.20062655, y: -0.6515184}
   serializedVersion: 2
-  m_Radius: 0.27369988
+  m_Radius: 0.12870961
 --- !u!70 &1183400807
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -986,8 +986,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11172724, y: 0.16042864}
-  m_Size: {x: 0.49709845, y: 2.5581677}
+  m_Offset: {x: -0.11172724, y: 0.3300737}
+  m_Size: {x: 0.49709845, y: 2.2188776}
   m_Direction: 0
 --- !u!4 &1183400808
 Transform:
@@ -997,7 +997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183400801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.36, y: 1.39, z: -15.628241}
+  m_LocalPosition: {x: 2.3519998, y: 1.8299999, z: -15.628241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1904920799}
