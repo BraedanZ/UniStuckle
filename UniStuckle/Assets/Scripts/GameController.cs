@@ -47,6 +47,9 @@ public class GameController : MonoBehaviour
             string timePlayingStr = timePlaying.ToString("mm':'ss'.'ff");
             timeCounter.text = timePlayingStr;
         }
+        if (Input.GetKeyDown(KeyCode.R)) {
+            LoadDemoScene();
+        }
     }
 
     public void StopTimer() {
