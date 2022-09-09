@@ -450,6 +450,11 @@ Transform:
   m_Father: {fileID: 1309068794}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8}
+--- !u!4 &52482601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1235778570723090098, guid: 7646acabeb0e2704384d2dcf195c9e4e, type: 3}
+  m_PrefabInstance: {fileID: 309659504319646769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &60904807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,7 +2312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630fc03edbe5a8144bc213842435b241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 52482601}
   smoothSpeed: 0.8
   offset: {x: 0, y: 1.8, z: -0.39}
 --- !u!20 &519420031
@@ -2365,7 +2370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &585491642
 GameObject:
@@ -9620,6 +9625,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1235778570826774293, guid: 7646acabeb0e2704384d2dcf195c9e4e, type: 3}
       propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235778570980575017, guid: 7646acabeb0e2704384d2dcf195c9e4e, type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
